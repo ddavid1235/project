@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Editează Carte</title></head>
+<body>
+    <h1>Editează carte</h1>
+    <form th:action="@{/editeaza}" th:object="${carte}" method="post">
+        <input type="hidden" th:field="*{id}"/>
+        Titlu: <input type="text" th:field="*{titlu}"/><br>
+        Autor: <input type="text" th:field="*{autor}"/><br>
+        An: <input type="number" th:field="*{an}"/><br>
+        Gen: <input type="text" th:field="*{gen}"/><br>
+        <button type="submit">Salvează modificările</button>
+    </form>
+    <a href="/catalog">Înapoi</a>
+</body>
+</html>

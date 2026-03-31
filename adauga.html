@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Adaugă Carte</title></head>
+<body>
+    <h1>Adaugă carte nouă</h1>
+    <form th:action="@{/adauga}" th:object="${carte}" method="post">
+        Titlu: <input type="text" th:field="*{titlu}"/><br>
+        Autor: <input type="text" th:field="*{autor}"/><br>
+        An: <input type="number" th:field="*{an}"/><br>
+        Gen: <input type="text" th:field="*{gen}"/><br>
+        <button type="submit">Salvează</button>
+    </form>
+    <a href="/catalog">Înapoi</a>
+</body>
+</html>
